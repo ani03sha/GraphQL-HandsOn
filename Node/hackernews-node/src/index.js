@@ -1,24 +1,12 @@
 const { GraphQLServer } = require('graphql-yoga');
 
-// This defines the GraphQL Schema
-const typeDefs = `
-    type Query {
-        info: String!
-        feed: [Link!]!
-    }
-
-    type Link {
-        id: ID!
-        description: String!
-        url: String!
-    }
-`;
-
 let links = [{
     id: 'link-0',
     url: 'www.howtographql.com',
     description: 'Fullstack tutorial for GraphQL'
 }];
+
+let idCount = links.length;
 
 // These represent the actual implementation of the GraphQL Schema
 const resolvers = {
@@ -27,17 +15,23 @@ const resolvers = {
         feed: () => links,
     },
 
-    Link: {
-        id: (parent) => parent.id,
-        description: (parent) => parent.description,
-        url: (parent) => parent.url
+    Mutation: {
+        post: (parent, args) => {
+            const link = {
+                id: `link-${idCount++}`,
+                description: args.description,
+                url: args.url
+            }
+            links.push(link)
+            return link
+        }
     }
 }
 
 // TypeDefs and Resolvers are bundled into the server to define what API operations are accpeted and 
 // how they should be resolved
 const server = new GraphQLServer({
-    typeDefs,
+    typeDefs: './src/schema.graphql',
     resolvers,
 });
 
