@@ -4,13 +4,17 @@ const Query = require('./resolvers/Query')
 const Mutation = require('./resolvers/Mutation')
 const User = require('./resolvers/User')
 const Link = require('./resolvers/Link')
+const Subscription = require('./resolvers/Subscription')
+const Vote = require('./resolvers/Vote')
 
 // These represent the actual implementation of the GraphQL Schema
 const resolvers = {
     Query,
     Mutation,
+    Subscription,
     User,
-    Link
+    Link,
+    Vote,
 }
 
 // TypeDefs and Resolvers are bundled into the server to define what API operations are accpeted and 
