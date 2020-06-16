@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { size } from 'polished';
 
 import { unit, colors } from '../styles';

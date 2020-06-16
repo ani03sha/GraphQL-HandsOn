@@ -1,5 +1,6 @@
 // @ts-ignore
-import styled, { keyframes } from 'react-emotion';
+import { keyframes } from 'react-emotion';
+import styled from '@emotion/styled';
 import { size } from 'polished';
 
 import { ReactComponent as Logo } from '../assets/logo.svg';

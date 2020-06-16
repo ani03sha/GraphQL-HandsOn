@@ -1,18 +1,14 @@
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache, NormalizedCacheObject } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
-import { ApolloProvider } from '@apollo/react-hooks';
+import { ApolloProvider, useQuery } from '@apollo/react-hooks';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Pages from './pages';
 import injectStyles from './styles';
 import { resolvers, typeDefs } from "./resolvers";
-import { ApolloProvider, useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
-
-import Pages from "./pages";
 import Login from "./pages/login";
-import injectStyles from "./styles";
 
 const cache = new InMemoryCache();
 const link = new HttpLink({

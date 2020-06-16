@@ -1,5 +1,5 @@
 // @ts-ignore
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { lighten } from 'polished';
 
 import { unit, colors } from '../styles';

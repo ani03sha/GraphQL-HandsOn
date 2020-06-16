@@ -1,5 +1,6 @@
 // @ts-ignore
-import styled, { css } from 'react-emotion';
+import { css } from 'react-emotion';
+import styled from '@emotion/styled';
 import { Link } from '@reach/router';
 import { colors, unit } from '../styles';
 

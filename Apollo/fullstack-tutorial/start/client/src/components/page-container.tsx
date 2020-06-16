@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 // @ts-ignore
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import { unit, colors } from '../styles';
 

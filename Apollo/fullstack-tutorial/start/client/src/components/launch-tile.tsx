@@ -1,6 +1,7 @@
 import React from 'react';
 // @ts-ignore
-import styled, { css } from 'react-emotion';
+import { css } from 'react-emotion';
+import styled from '@emotion/styled'
 import { Link } from '@reach/router';
 
 import galaxy from '../assets/images/galaxy.jpg';
