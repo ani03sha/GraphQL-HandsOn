@@ -12,9 +12,19 @@ const link = new HttpLink({
     uri: 'http://localhost:4000/'
 });
 
-const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
+const client = new ApolloClient({
     cache,
-    link
+    link: new HttpLink({
+        headers: { authorization: localStorage.getItem('token') },
+        uri: "http://localhost:4000/graphql",
+    }),
+});
+
+cache.writeData({
+    data: {
+        isLoggedIn: !!localStorage.getItem('token'),
+        cartItems: [],
+    },
 });
 
 injectStyles();
