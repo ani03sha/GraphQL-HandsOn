@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// @ts-ignore
 import styled, { css } from 'react-emotion';
 import { size } from 'polished';
 
@@ -39,14 +40,14 @@ export default class LoginForm extends Component<LoginFormProps, LoginFormState>
         </Header>
         <StyledRocket />
         <Heading>Space Explorer</Heading>
-        <StyledForm onSubmit={(e) => this.onSubmit(e)}>
+        <StyledForm onSubmit={(e: React.FormEvent<HTMLFormElement>) => this.onSubmit(e)}>
           <StyledInput
             required
             type="email"
             name="email"
             placeholder="Email"
             data-testid="login-input"
-            onChange={(e) => this.onChange(e)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.onChange(e)}
           />
           <Button type="submit">Log in</Button>
         </StyledForm>

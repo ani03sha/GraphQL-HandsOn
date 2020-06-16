@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import styled from 'react-emotion';
 
 import { unit } from '../styles';

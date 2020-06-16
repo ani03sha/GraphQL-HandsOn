@@ -1,3 +1,5 @@
+import { Component } from 'react'; // literally anything, don't even have to use it
+
 export { default as Button } from './button';
 export { default as Footer } from './footer';
 export { default as Header } from './header';

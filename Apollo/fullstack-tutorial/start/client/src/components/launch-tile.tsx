@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import styled, { css } from 'react-emotion';
 import { Link } from '@reach/router';
 

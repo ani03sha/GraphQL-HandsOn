@@ -1,3 +1,4 @@
+// @ts-ignore
 import styled from 'react-emotion';
 import { lighten } from 'polished';
 

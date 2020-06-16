@@ -1,3 +1,4 @@
+// @ts-ignore
 import styled, { keyframes } from 'react-emotion';
 import { size } from 'polished';
 
