@@ -41,3 +41,20 @@ query GetLaunches {
     }
   }
 }
+-------------------------------------------
+// Login
+mutation LoginUser {
+  login(email: "daisy@apollographql.com")
+}
+--------------------------------------------
+// Book trips
+mutation BookTrips {
+  bookTrips(launchIds: [67, 68, 69]) {
+    success
+    message
+    launches {
+      id
+    }
+  }
+}
+-------------------------------------------
